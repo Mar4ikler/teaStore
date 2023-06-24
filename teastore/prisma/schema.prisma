@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model orders {
+  order_id   Int      @id(map: "PK__orders__46596229C9B5CB96") @default(autoincrement())
+  user_id    Int
+  product_id Int
+  quantity   Int
+  price      Decimal  @db.Decimal(10, 2)
+  orderDate  String   @db.VarChar(250)
+  isBuying   String   @default("false", map: "DF__orders__isBuying__47DBAE45") @db.VarChar(250)
+  users      users    @relation(fields: [user_id], references: [user_id], onDelete: Cascade, onUpdate: NoAction, map: "orders_ibfk_1")
+  products   products @relation(fields: [product_id], references: [product_id], onDelete: Cascade, onUpdate: NoAction, map: "orders_ibfk_2")
+}
+
+model products {
+  product_id         Int           @id(map: "PK__products__47027DF594358D23") @default(autoincrement())
+  product_name       String        @unique(map: "uproduct_name") @db.VarChar(50)
+  description        String        @db.VarChar(500)
+  productImage       String        @db.VarChar(255)
+  price              Decimal       @db.Decimal(10, 2)
+  category_id        Int
+  brewingTemperature String        @db.VarChar(100)
+  orders             orders[]
+  subcategories      subcategories @relation(fields: [category_id], references: [category_id], onDelete: Cascade, onUpdate: NoAction, map: "products_ibfk_1")
+}
+
+model reviews {
+  review_id   Int    @id(map: "PK__reviews__60883D906B609303") @default(autoincrement())
+  user_id     Int
+  review_text String @db.VarChar(500)
+  date        String @db.VarChar(250)
+  users       users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade, onUpdate: NoAction, map: "reviews_ibfk_1")
+}
+
+model subcategories {
+  category_id         Int             @id(map: "PK__subcateg__D54EE9B477FDE308") @default(autoincrement())
+  category_name       String          @unique(map: "usubcategories_name") @db.VarChar(50)
+  parent              Int?
+  products            products[]
+  subcategories       subcategories?  @relation("subcategoriesTosubcategories", fields: [parent], references: [category_id], onDelete: NoAction, onUpdate: NoAction, map: "subcategories_ibfk_1")
+  other_subcategories subcategories[] @relation("subcategoriesTosubcategories")
+}
+
+model users {
+  user_id  Int       @id(map: "PK__users__B9BE370F09289406") @default(autoincrement())
+  username String    @db.VarChar(50)
+  email    String    @unique(map: "uemail") @db.VarChar(50)
+  password String    @db.VarChar(250)
+  role     Int?      @default(0, map: "DF__users__role__2E1BDC42")
+  orders   orders[]
+  reviews  reviews[]
+}

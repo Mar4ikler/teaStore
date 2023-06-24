@@ -1,0 +1,16 @@
+.notFound {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    justify-items: center;
+    align-self: center;
+}
+
+.notFound > div:first-child {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.notFound > div:last-child {
+    font-weight: bold;
+    font-size: 50px;
+}

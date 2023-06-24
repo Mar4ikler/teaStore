@@ -1,0 +1,39 @@
+.headerMain {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+
+}
+
+.imgLogo {
+    width: 50px;
+    height: 50px;
+    margin-right: 80px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 43px;
+    justify-self: center;
+    margin-top: 5px;
+}
+
+.headerMain > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 140px;
+    /*border-bottom: 1px solid black;*/
+    justify-self: center;
+    font-size: 13px;
+    align-items: center;
+}
+
+.kek {
+    text-decoration: none;
+    color: black;
+    justify-self: center;
+}
+
+.kek:hover {
+    color: #C03939;
+}

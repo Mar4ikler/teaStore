@@ -1,0 +1,31 @@
+.productMain {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+}
+
+.productContent {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 15px;
+    justify-self: center;
+    width: 1000px;
+}
+
+.productMainInfo {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 20px;
+    justify-self: center;
+}
+
+.infoToOrder {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 20px;
+}
+
+.productContent > div:first-child {
+    font-weight: bold;
+    justify-self: center;
+}
+

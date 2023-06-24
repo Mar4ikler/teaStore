@@ -1,0 +1,37 @@
+.loginContent {
+    display: grid;
+    grid-template-rows: repeat(6, max-content);
+    justify-items: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.loginImage {
+    width: 216px;
+    height: 216px;
+}
+
+.loginH {
+    justify-self: center;
+}
+
+.buttonStl {
+    width: 200px;
+    height: 20px;
+    border: 1px solid #C03939;
+    background-color: #C03939;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.buttonStl:hover {
+    background-color: #e17d17;
+    border: #e17d17;
+}
+
+.error-message {
+    color: red;
+}
+

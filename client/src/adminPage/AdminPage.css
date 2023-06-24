@@ -1,0 +1,25 @@
+.adminPageMain {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 30px;
+}
+
+.adminPageContent {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 10px;
+    justify-items: center;
+}
+
+.formProduct {
+    display: grid;
+    grid-template-rows: repeat(6, max-content);
+    row-gap: 10px;
+}
+
+
+.formProduct > div:nth-child(2) > textarea {
+    width: 200px;
+    height: 200px;
+    resize: none;
+}

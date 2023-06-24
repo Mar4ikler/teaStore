@@ -1,0 +1,73 @@
+.cartMain {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 30px;
+}
+
+.cartContent {
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    row-gap: 10px;
+    justify-items: center;
+}
+
+.cartContent > div:first-child {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.cartProducts {
+    display: grid;
+    grid-template-rows: max-content;
+    row-gap: 10px;
+    overflow-y: auto;
+    height: 500px;
+}
+
+.prCard {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    border: 1px solid black;
+}
+
+.prCard > img {
+    width: 300px;
+    height: 250px;
+}
+
+.prInfo {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    row-gap: 10px;
+}
+
+.prMainInfo {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 10px;
+}
+
+.prInfo > div:last-child {
+    align-self: end;
+    padding: 10px;
+}
+
+.prMainInfo > div:first-child {
+    font-weight: bold;
+}
+
+.buttonStyle {
+    width: 530px;
+    height: 30px;
+    border: 1px solid #C03939;
+    background-color: #C03939;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.buttonStyle:hover {
+    background-color: #e17d17;
+    border: #e17d17;
+}

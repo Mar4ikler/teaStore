@@ -1,0 +1,79 @@
+.cabinetMain {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 30px;
+}
+
+.cabinetContent {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    justify-items: center;
+    row-gap: 30px;
+}
+
+.cabinetContent > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.orderCardBuying {
+    display: grid;
+    grid-template-rows: max-content;
+    row-gap: 15px;
+}
+
+.prCardBuying {
+    display: grid;
+    grid-template-rows: max-content;
+    row-gap: 15px;
+    border: 1px solid black;
+}
+
+.prCardBuying > div:first-child {
+    font-weight: bold;
+}
+
+.ordIndo {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 15px;
+}
+
+.ordIndo > img {
+    width: 300px;
+    height: 250px;
+}
+
+.prMainInfoBuying {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 10px;
+}
+
+.orderCardBuying {
+    overflow-y: auto;
+    height: 500px;
+}
+
+.userInformation {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 10px;
+}
+
+.userInformation > img {
+    width: 100px;
+    height: 100px;
+}
+
+.userInfoFromServer {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 10px;
+}
+
+.userInfo {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 10px;
+}

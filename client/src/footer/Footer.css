@@ -1,0 +1,10 @@
+.footerInfo > img {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.footerInfo {
+    width: 100%;
+    justify-items: center;
+}

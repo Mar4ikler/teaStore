@@ -1,0 +1,55 @@
+.reviewMain {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 30px;
+}
+
+.reviewContent {
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    justify-self: center;
+    row-gap: 20px;
+}
+
+.reviewContent > div:nth-child(4) {
+    border: 1px solid black;
+}
+
+.reviewContent > div:first-child {
+    font-weight: bold;
+    justify-self: center;
+    font-size: 20px;
+}
+
+.userInfo {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 15px;
+}
+
+.allReviews {
+    grid-template-columns: max-content;
+    background-color: lightgray;
+    overflow-y: auto;
+    height: 400px;
+}
+
+.formReview {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+}
+
+.formReview >  button {
+    width: 410px;
+}
+
+.oneReview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.textAr {
+    resize: none;
+    width: 410px;
+    height: 73px;
+}

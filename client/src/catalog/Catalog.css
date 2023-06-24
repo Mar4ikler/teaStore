@@ -1,0 +1,54 @@
+.catalogMain {
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 20px;
+}
+
+.catalogContent {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    row-gap: 15px;
+}
+
+.productsList {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 10px;
+    justify-self: center;
+}
+
+.productCard {
+    background-color: lightgray;
+    width: 294px;
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    font-size: 10px;
+    row-gap: 5px;
+    border: 1px solid black;
+}
+
+.mainCardInfo {
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+}
+
+.mainCardInfo > div:first-child > img {
+    width: 100%;
+}
+
+.mainCardInfo > div:nth-child(2) {
+    font-weight: bold;
+}
+.mainCardInfo > div:nth-child(4) {
+    font-weight: bold;
+}
+
+.lastRow {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+
+.catalogHead {
+    text-align: center;
+    font-weight: bold;
+}
